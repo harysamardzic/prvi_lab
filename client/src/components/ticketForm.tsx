@@ -23,9 +23,7 @@ export const SubmitForm = () => {
       const response = await axios.post(`${process.env.REACT_APP_BE_URL}/create`, formData,{headers: {
         'Content-Type': 'application/json',
       }},);
-      console.log(`${process.env.REACT_APP_BE_URL}/create`);
       
-        console.log(JSON.stringify(response.data));
         
       setQrCode(response.data.qrCode);
       setTicketId(response.data.ticketId);
